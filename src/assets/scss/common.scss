@@ -1,0 +1,25 @@
+.pointer {
+  cursor: pointer;
+}
+.text-center {
+  text-align: center
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.form-item-tips, .form-item-error {
+  // 样式模仿  .el-form-item__error 的：
+  float: left;
+  font-size: 12px;
+  color: #ccc;
+  line-height: 1;
+  margin-top: 2px;
+  vertical-align: top;
+}
+.form-item-error {
+  color: #F56C6C;
+}

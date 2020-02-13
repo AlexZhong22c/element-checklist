@@ -1,0 +1,42 @@
+/*边距*/
+$fontSizeArr:  (10, 12, 14, 16, 18, 20);
+$boxGapArr:  (0, 5, 8, 10, 15, 16, 20, 30, 40, 50, 100);
+
+@each $size in $fontSizeArr{
+  .fs#{$size}{
+      font-size: #{$size}px;
+  }
+}
+
+@each $gap in $boxGapArr{
+  .m#{$gap}{
+    margin: #{$gap}px !important;
+  }
+  .mt#{$gap}{
+    margin-top: #{$gap}px !important;
+  }
+  .mb#{$gap}{
+    margin-bottom: #{$gap}px !important;
+  }
+  .ml#{$gap}{
+    margin-left: #{$gap}px !important;
+  }
+  .mr#{$gap}{
+    margin-right: #{$gap}px !important;
+  }
+  .p#{$gap}{
+    padding: #{$gap}px !important;
+  }
+  .pt#{$gap}{
+    padding-top: #{$gap}px !important;
+  }
+  .pb#{$gap}{
+    padding-bottom: #{$gap}px !important;
+  }
+  .pl#{$gap}{
+    padding-left: #{$gap}px !important;
+  }
+  .pr#{$gap}{
+    padding-right: #{$gap}px !important;
+  }
+}
