@@ -12,12 +12,12 @@
     "vue-element-admin"
   ],
   "bugs": {
-    "url": "https://github.com/xxxxxx/element-checklist/issues"
+    "url": "https://github.com/AlexZhong22c/element-checklist/issues"
   },
-  "homepage": "https://github.com/xxxxxx/element-checklist#readme",
+  "homepage": "https://github.com/AlexZhong22c/element-checklist#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xxxxxx/element-checklist.git"
+    "url": "git+https://github.com/AlexZhong22c/element-checklist.git"
   },
   "license": "MIT",
   "scripts": {
@@ -61,6 +61,7 @@
     "@vue/cli-service": "^3.6.0",
     "babel-eslint": "^10.0.1",
     "babel-preset-vue-app": "^2.0.0",
+    "dart-sass": "^1.25.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-plugin-import": "^2.18.2",
@@ -71,9 +72,9 @@
     "eslint-plugin-vue": "^5.0.0",
     "husky": "^3.0.4",
     "lint-staged": "^9.2.3",
-    "node-sass": "^4.13.1",
     "nodemon": "^1.19.1",
-    "sass-loader": "^7.3.1",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.5.21"
   },
   "postcss": {
