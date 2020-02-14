@@ -1,7 +1,8 @@
 // const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/element-checklist/" : "/",
+  productionSourceMap: false,
   devServer: {
     proxy: {
       "/api/*": {
