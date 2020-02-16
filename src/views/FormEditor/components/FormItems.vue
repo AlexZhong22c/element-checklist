@@ -4,6 +4,7 @@
       slot="header"
       class="clearfix"
     >
+      <FileGen style="float: right; padding: 3px 0" v-if="!isOffline"/>
       <el-button
         style="float: right; padding: 3px 0"
         type="text"
@@ -11,7 +12,6 @@
       >
         复制代码
       </el-button>
-      <FileGen style="float: right; padding: 3px 0" />
     </div>
     <div style="width:100%;">
       <el-form
@@ -81,7 +81,7 @@ export default {
   },
   // clickedIndex
   computed: {
-    ...mapGetters(['clickedIndex', 'formItems', 'srcFormCode'])
+    ...mapGetters(['clickedIndex', 'formItems', 'srcFormCode', 'isOffline'])
   },
   watch: {
     formItems (val) {

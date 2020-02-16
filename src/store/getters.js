@@ -1,4 +1,5 @@
 const getters = {
+  isOffline: state => state.network.isOffline,
   clickedIndex: state => state.form.clickedIndex,
   formAttribute: state => state.form.formAttribute,
   formItems: state => state.form.formItems,

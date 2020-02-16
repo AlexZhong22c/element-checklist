@@ -70,7 +70,8 @@ module.exports = {
     // 去掉一些不必用于非生产环境项目中的，没必要统一的，合并代码的时候一堆warning：
     'import/order': 'off',
     'quotes': 'off',
-    'eol-last': 'off'
+    'eol-last': 'off',
+    'arrow-parens': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint',

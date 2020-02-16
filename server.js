@@ -8,7 +8,7 @@ app.use(bodyParser());
 const router = new Router();
 
 let pwd = __dirname;
-console.log("test", pwd);
+
 router.get("/api/pwd", ctx => {
   ctx.body = {
     data: {

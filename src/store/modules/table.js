@@ -1,4 +1,4 @@
-const form = {
+const table = {
   state: {
     srcCode: ''
   },
@@ -9,4 +9,4 @@ const form = {
   }
 };
 
-export default form;
+export default table;

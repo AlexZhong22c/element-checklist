@@ -20,7 +20,7 @@
       >
         复制代码
       </el-button>
-      <FileGen />
+      <FileGen v-if="!isOffline"/>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['srcTableCode'])
+    ...mapGetters(['srcTableCode', 'isOffline'])
   },
   methods: {
     handleClipboard (text, evnet) {

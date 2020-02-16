@@ -1,22 +1,17 @@
 <h1 align="center">Welcome to element-checklist 👋</h1>
 <p align="center">
-  <img  width="320" src="https://raw.githubusercontent.com/AlexZhong22c/element-checklist/master/src/assets/logo-with-title.png">
-</p>
-<p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-   <a href="https://github.com/dongsuo/vue-data-board/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+   <a href="https://github.com/AlexZhong22c/element-checklist/blob/master/LICENSE">
+    <img alt="License: GPL v3" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" target="_blank" />
   </a>
   <a href='https://travis-ci.org/AlexZhong22c/element-checklist' target="_blank" alt='travis ci'>
-  <img alt='travis ci' src='https://travis-ci.org/AlexZhong22c/element-checklist.svg?branch=master'>
+  <img alt='travis ci' src='https://travis-ci.org/AlexZhong22c/element-checklist.svg?branch=preview'>
   </a>
 </p>
 
 > checklist工作流，快速创建 element-ui 组件代码。
 
 ## 🏠 [Homepage](https://AlexZhong22c.github.io/element-checklist/)
-
-> 网页版本，在`preview`分支
 
 ## Install
 
