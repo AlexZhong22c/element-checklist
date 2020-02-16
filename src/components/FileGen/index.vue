@@ -4,12 +4,13 @@
     type="text"
     @click="genLocalFile(srcFormCode,$event)"
   >
-    生成代码
+    输出代码文件
   </el-button>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
+import services from '@/services';
 
 export default {
   computed: {
@@ -27,18 +28,16 @@ export default {
     }
   },
   methods: {
-    genLocalFile () {
-      fetch('/api/genlocalfile', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ code: this.srcCode })
-      }).then(res => res.json()).then(res => {
-        if (res.status === 'success') {
-          this.$message.success('生成成功')
+    async genLocalFile () {
+      try {
+        const res = await services.post('/api/genlocalfile', { code: this.srcCode })
+        if (!res.status || res.status !== 'success') {
+          throw new Error('服务器处理异常');
         }
-      })
+        this.$message.success('输出代码文件成功');
+      } catch (e) {
+        this.$message.error('输出代码文件需要后端支持');
+      }
     }
   }
 }

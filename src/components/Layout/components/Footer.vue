@@ -28,23 +28,11 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['pwd', 'pwd_segments', 'custom_pwds'])
+    ...mapGetters(['pwd', 'pwd_segments'])
   },
   mounted () {
-    if (this.custom_pwds[0]) {
-      this.$store.commit('SET_PWD', this.custom_pwds[0]);
-    } else {
-      this.getPWD();
-    }
   },
   methods: {
-    getPWD () {
-      fetch('/api/pwd')
-        .then(res => res.json())
-        .then(res => {
-          this.$store.commit('SET_PWD', res.data.pwd);
-        });
-    },
     editDir () {
       this.dialogFormVisible = true;
     }

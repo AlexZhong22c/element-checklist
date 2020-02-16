@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img src="../../assets/logo.png" />
+    <!-- <img src="../../assets/logo.png" /> -->
     <!-- <h1>A Data Analysis Board in Vue.</h1> -->
     <el-form class="form-wrapper">
       <el-form-item>
@@ -32,7 +32,9 @@
   </div>
 </template>
 <script>
-import { login } from '@/api/user';
+/**
+ * @file 这个文件暂时用不到
+ */
 export default {
   data () {
     return {
@@ -45,21 +47,21 @@ export default {
   },
   methods: {
     handleLogin () {
-      this.loading = true;
-      login(this.user)
-        .then(resp => {
-          this.loading = false;
-          this.$store.dispatch('Login', resp.data.token).then(() => {
-            this.$router.push(this.$route.query.redirect || '/');
-          });
-        })
-        .catch(() => {
-          this.loading = false;
-        });
+      // this.loading = true;
+      // login(this.user)
+      //   .then(resp => {
+      //     this.loading = false;
+      //     this.$store.dispatch('Login', resp.data.token).then(() => {
+      //       this.$router.push(this.$route.query.redirect || '/');
+      //     });
+      //   })
+      //   .catch(() => {
+      //     this.loading = false;
+      //   });
     },
     useTestAccount () {
       this.user = {
-        userName: 'wscn',
+        userName: 'admin1',
         password: '123456'
       };
     }

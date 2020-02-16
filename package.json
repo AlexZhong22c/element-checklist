@@ -36,6 +36,7 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "change-case": "^3.1.0",
     "classlist-polyfill": "^1.2.0",
     "clipboard": "^2.0.4",

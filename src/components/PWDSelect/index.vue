@@ -54,6 +54,8 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import services from '@/services';
+
 export default {
   data () {
     return {
@@ -72,13 +74,10 @@ export default {
     }
   },
   methods: {
-    getDir () {
+    async getDir () {
       const dir_path = '/' + this.pwd_segments.join('/');
-      fetch(`/api/dirs?pwd=${dir_path}`)
-        .then(res => res.json())
-        .then(res => {
-          this.fileTree = res.data.files;
-        });
+      const res = await services.get(`/api/dirs?pwd=${dir_path}`);
+      this.fileTree = res.data.files;
     },
     addFilePathSegment (file_path) {
       this.$store.commit('ADD_PWD_SEGMENT', file_path);
