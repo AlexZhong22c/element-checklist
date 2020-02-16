@@ -51,7 +51,7 @@ const router = new VueRouter({
           component: () => import('@/views/TableEditor/index.js')
         }
       ]
-    }
+    },
     // {
     //   path: '/option-editor',
     //   component: Layout,
@@ -66,6 +66,20 @@ const router = new VueRouter({
     //     }
     //   ]
     // },
+    {
+      path: '/code-editor',
+      component: Layout,
+      meta: {
+        title: '在线查看代码',
+        icon: 'el-icon-s-platform'
+      },
+      children: [
+        {
+          path: '',
+          component: () => import('@/views/Monaco/index')
+        }
+      ]
+    }
   ]
 });
 

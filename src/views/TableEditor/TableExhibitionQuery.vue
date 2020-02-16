@@ -20,6 +20,7 @@
       >
         复制代码
       </el-button>
+      <el-button type="text" @click="skipToEditorCode">在线查看代码</el-button>
       <FileGen v-if="!isOffline"/>
     </div>
   </div>
@@ -50,7 +51,7 @@ export default {
       });
     },
     skipToEditorCode () {
-      this.$router.push(`/code-editor?code=table`);
+      this.$router.push('/code-editor');
     }
   }
 };

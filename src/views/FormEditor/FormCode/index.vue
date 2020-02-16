@@ -53,7 +53,6 @@ export default {
       };
       this.srcCode = genVueFileWrapper(data);
       this.$store.commit('SET_SRC_FORM_CODE', this.srcCode);
-      window.localStorage.removeItem('vue-element-form-gen-code');
       window.localStorage.setItem('vue-element-form-gen-code', this.srcCode);
     },
     skipToEdit () {
