@@ -4,13 +4,9 @@
       href="https://github.com/AlexZhong22c/element-checklist"
       target="_blank"
     >
-      <img
-        style="float:left;margin-left:10px;"
-        height="60px"
-        :src="logo"
-        alt
-        srcset
-      >
+      <h1
+        style="float:left;margin-left:10px;line-height:60px;margin-top:0;margin-bottom:0;padding:0;"
+      >element checklist</h1>
     </a>
     <el-menu
       style="float:right"
@@ -32,9 +28,6 @@
 </template>
 
 <script>
-import logo from '@/assets/logo-with-title.png';
-import LogoWithNoTitle from '@/assets/logo-no-title.png';
-
 export default {
   props: {
     isSidebarCollapse: {
@@ -44,8 +37,6 @@ export default {
   },
   data () {
     return {
-      logo,
-      LogoWithNoTitle,
       isCollapse: true
     };
   },
