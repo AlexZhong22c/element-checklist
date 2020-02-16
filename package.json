@@ -1,6 +1,6 @@
 {
   "name": "element-checklist",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "az22c",
   "description": "a tool for starting up an element-ui component",
   "bin": {

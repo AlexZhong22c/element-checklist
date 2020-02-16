@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to element-checklist 👋</h1>
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="npm version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
    <a href="https://github.com/AlexZhong22c/element-checklist/blob/master/LICENSE">
     <img alt="License: GPL v3" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" target="_blank" />
   </a>
