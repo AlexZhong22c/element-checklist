@@ -124,7 +124,7 @@ export const EInputTrim = (formObj, { value, label, trim: trimParam, clearable, 
   `.trim();
 }
 
-export const EInputNum = (formObj, { value, controls, step, precision, placeholder }) => {
+export const EInputNumber = (formObj, { value, controls, step, precision, placeholder }) => {
   const attr = {
     controls: controls === false ? false : undefined,
     step: step > 1 ? step : undefined,
@@ -178,7 +178,7 @@ export const ECheckboxGroup = (formObj, { value, vForName, vForType, checkboxBut
   `.trim();
 }
 
-export const ERadio = (formObj, { value, vForName, radioButton: radioButtonParam, radioBorder, vForType }) => {
+export const ERadioGroup = (formObj, { value, vForName, radioButton: radioButtonParam, radioBorder, vForType }) => {
   const attr = { border: radioBorder };
   if (isSimpleArray(vForType)) {
     Object.assign(attr, attrWhenVForSimpleArray(value));
@@ -217,9 +217,9 @@ export const ESwitch = (formObj, {
 // 分发：
 const formItemsContent = {
   EInputTrim,
-  EInputNum,
+  EInputNumber,
   ESelect,
   ECheckboxGroup,
-  ERadio,
+  ERadioGroup,
   ESwitch
 };

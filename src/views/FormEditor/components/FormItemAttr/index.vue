@@ -65,7 +65,7 @@
           @change="setFormItemAttribute"
         >maxlength</el-checkbox>
         <el-checkbox
-          v-if="['ERadio'].includes(formItemElement.type)"
+          v-if="['ERadioGroup'].includes(formItemElement.type)"
           v-model="formItemAttribute.radioButton"
           :key="`formItemAttribute.radioButton${formItemAttribute.radioButton}`"
           @change="setFormItemAttribute"
@@ -177,13 +177,13 @@
           v-model="formItemAttribute.validatorInt"
           :key="`formItemAttribute.validatorInt${formItemAttribute.validatorInt}`"
           @change="setFormItemAttribute"
-          v-if="['EInputNum'].includes(formItemElement.type)"
+          v-if="['EInputNumber'].includes(formItemElement.type)"
         >整数</el-checkbox>
         <el-checkbox
           v-model="formItemAttribute.validatorNaturalNum"
           :key="`formItemAttribute.validatorNaturalNum${formItemAttribute.validatorNaturalNum}`"
           @change="setFormItemAttribute"
-          v-if="['EInputNum'].includes(formItemElement.type)"
+          v-if="['EInputNumber'].includes(formItemElement.type)"
         >自然数</el-checkbox>
         <el-select
           v-model="formItemAttribute.validatorType"
@@ -202,7 +202,7 @@
           ></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="min" label-width="40px" v-if="['EInputTrim', 'EInputNum'].includes(formItemElement.type)">
+      <el-form-item label="min" label-width="40px" v-if="['EInputTrim', 'EInputNumber'].includes(formItemElement.type)">
         <el-input-number-with-btn
           v-model="formItemAttribute.validatorMin"
           :btn-list="[0, '清空']"
@@ -210,7 +210,7 @@
           @change="setFormItemAttribute">
         </el-input-number-with-btn>
       </el-form-item>
-      <el-form-item label="max" label-width="40px" v-if="['EInputTrim', 'EInputNum'].includes(formItemElement.type)">
+      <el-form-item label="max" label-width="40px" v-if="['EInputTrim', 'EInputNumber'].includes(formItemElement.type)">
         <el-input-number-with-btn
           v-model="formItemAttribute.validatorMax"
           :btn-list="[20, 100, '清空']"
@@ -221,33 +221,33 @@
       <legend>不常用属性：</legend>
       <el-form-item label-width="0px">
         <el-checkbox
-          v-if="['EInputNum'].includes(formItemElement.type)"
+          v-if="['EInputNumber'].includes(formItemElement.type)"
           v-model="formItemAttribute.controls"
           :key="`formItemAttribute.controls${formItemAttribute.controls}`"
           @change="setFormItemAttribute"
         >controls</el-checkbox>
         <el-checkbox
-          v-if="['ERadio'].includes(formItemElement.type)"
+          v-if="['ERadioGroup'].includes(formItemElement.type)"
           :value="formItemAttribute.radioBorder"
           :key="`formItemAttribute.radioBorder${formItemAttribute.radioBorder}`"
           @change="(value) => toggleFormItemAttribute(value, 'radioBorder')"
         >全员border</el-checkbox>
       </el-form-item>
-      <el-form-item label="step" v-if="['EInputNum'].includes(formItemElement.type)">
+      <el-form-item label="step" v-if="['EInputNumber'].includes(formItemElement.type)">
         <el-input-number
           :min="0"
           v-model="formItemAttribute.step"
           @change="setFormItemAttribute"
         ></el-input-number>
       </el-form-item>
-      <el-form-item label="precision" v-if="['EInputNum'].includes(formItemElement.type)">
+      <el-form-item label="precision" v-if="['EInputNumber'].includes(formItemElement.type)">
         <el-input-number
           :min="0"
           v-model="formItemAttribute.precision"
           @change="setFormItemAttribute"
         ></el-input-number>
       </el-form-item>
-      <el-form-item label="placeholder" v-if="['EInputNum'].includes(formItemElement.type)">
+      <el-form-item label="placeholder" v-if="['EInputNumber'].includes(formItemElement.type)">
         <el-input v-model="formItemAttribute.placeholder"
           clearable
           @change="setFormItemAttribute"
@@ -298,8 +298,8 @@ import { emitShowLabelArrayDialog, listenSubmitLabelArrayDialog } from '@/compon
 // const initFormItemAttribute = (() => {
 //   const result = {
 //     ...new EInputTrim(),
-//     ...new EInputNum(),
-//     ...new ERadio()
+//     ...new EInputNumber(),
+//     ...new ERadioGroup()
 //   };
 //   return () => deepClone(result);
 // })();
@@ -379,7 +379,7 @@ export default {
     setFormItemAttributeAndInitOthers (token) {
       const { formItemAttribute } = this;
       // 关于这行代码的逻辑，includes(this.formItemElement.type) 很难继续迭代，非常容易漏:
-      if (token === 'value2vForName' && ['ERadio', 'ECheckboxGroup', 'ESelect'].includes(this.formItemElement.type)) {
+      if (token === 'value2vForName' && ['ERadioGroup', 'ECheckboxGroup', 'ESelect'].includes(this.formItemElement.type)) {
         const result = changeCase.upperCase(changeCase.snakeCase(formItemAttribute.value)) + '_LABEL_ARRAY';
         formItemAttribute.vForName = formItemAttribute.vForName || result;
       }

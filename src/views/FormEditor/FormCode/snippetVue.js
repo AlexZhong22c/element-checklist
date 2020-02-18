@@ -9,8 +9,8 @@ import { isSimpleArray } from '@/views/FormEditor/components/opt.js';
 import objectStringify from '@/utils/object-stringify';
 import deepClone from '@/utils/deep-clone';
 
-const inputRequired = ['EInputTrim', 'EInputNum'];
-const selectRequired = ['ERadio', 'ECheckboxGroup', 'ESelect'];
+const inputRequired = ['EInputTrim', 'EInputNumber'];
+const selectRequired = ['ERadioGroup', 'ECheckboxGroup', 'ESelect'];
 
 export const _rules = validated => {
   if (validated) {
@@ -89,9 +89,9 @@ ${props.value}: ${window.decorateArray([
   `{ type: '${props.validatorType}', message: '${props.label}格式应为${props.validatorType}', trigger: '${trigger}' }`.isExist(props.validatorType),
   `{ type: 'integer', message: '${props.label}必须为整数' }`.isExist(props.validatorInt),
   `{ pattern: /^(([0-9]*[1-9][0-9]*)|(0+))$/, message: '${props.label}必须为自然数' }`.isExist(props.validatorNaturalNum),
-  `{ min: ${props.validatorMin}, message: '${props.label}不得小于${props.validatorMin}', type: 'number' }`.isExist(item.type === 'EInputNum' && (hasNumberMin && !props.validatorMax)),
-  `{ max: ${props.validatorMax}, message: '${props.label}不得大于${props.validatorMax}', type: 'number' }`.isExist(item.type === 'EInputNum' && (!hasNumberMin && props.validatorMax)),
-  `{ min: ${props.validatorMin}, max: ${props.validatorMax}, message: '${props.label}的范围应为${props.validatorMin}~${props.validatorMax}', type: 'number' }`.isExist(item.type === 'EInputNum' && (hasNumberMin && props.validatorMax)),
+  `{ min: ${props.validatorMin}, message: '${props.label}不得小于${props.validatorMin}', type: 'number' }`.isExist(item.type === 'EInputNumber' && (hasNumberMin && !props.validatorMax)),
+  `{ max: ${props.validatorMax}, message: '${props.label}不得大于${props.validatorMax}', type: 'number' }`.isExist(item.type === 'EInputNumber' && (!hasNumberMin && props.validatorMax)),
+  `{ min: ${props.validatorMin}, max: ${props.validatorMax}, message: '${props.label}的范围应为${props.validatorMin}~${props.validatorMax}', type: 'number' }`.isExist(item.type === 'EInputNumber' && (hasNumberMin && props.validatorMax)),
   `{ min: ${props.validatorMin}, message: '${props.label}的长度不得小于${props.validatorMin}个字符' }`.isExist(item.type === 'EInputTrim' && props.validatorMin),
   `{ max: ${props.validatorMax}, message: '${props.label}的长度不得大于${props.validatorMax}个字符' }`.isExist(item.type === 'EInputTrim' && props.validatorMax)
 ])}`.trim().insertBlanks(2)

@@ -37,7 +37,7 @@ class EInputTrim extends Base {
   static resetTemplate = Object.freeze(new EInputTrim());
 }
 
-class EInputNum extends Base {
+class EInputNumber extends Base {
   // 数据验证：
   validatorInt = undefined
   validatorNaturalNum = undefined
@@ -49,7 +49,7 @@ class EInputNum extends Base {
   precision = undefined
   placeholder = undefined
 }
-class ERadio extends Base {
+class ERadioGroup extends Base {
   // 该元素属性：
   radioButton = false
   vForName = undefined
@@ -101,8 +101,8 @@ class ESwitch extends Base {
 export default {
   Base,
   EInputTrim,
-  EInputNum,
-  ERadio,
+  EInputNumber,
+  ERadioGroup,
   ECheckboxGroup,
   ESelect,
   ESwitch

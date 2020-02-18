@@ -41,7 +41,7 @@
               :class="{selected:idx===clickedIndex}"
               @click="genFormItemByClick(idx,formItem)"
             >
-              <el-form-item :label="formItem&&formItem.props.label||'表单label'">
+              <el-form-item :label="formItem&&formItem.props.label||'待设置label'">
                 <component
                   :is="formItem.type"
                   v-if="formItem"

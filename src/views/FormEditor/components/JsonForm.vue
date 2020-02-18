@@ -18,6 +18,9 @@
  * @file 左下角的json表单
  */
 import { isObject, isArray } from '@/utils';
+import formItemModels from '@/models/form-item.js';
+
+const { EInputTrim } = formItemModels;
 export default {
   data () {
     return {
@@ -50,11 +53,11 @@ export default {
           const value = pre_value ? `${pre_value}${item}` : item;
           tmp.push({
             type: 'EInputTrim',
-            title: 'JSON生成',
+            title: 'EInputTrim 输入框',
             props: {
+              ...new EInputTrim(),
               label: `${data[item] || item}`,
-              value,
-              required: ''
+              value
             }
           });
         }

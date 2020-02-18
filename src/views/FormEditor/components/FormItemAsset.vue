@@ -30,7 +30,7 @@
  */
 import formItemModels from '@/models/form-item.js';
 
-const { EInputTrim, EInputNum, ERadio, ECheckboxGroup, ESelect, ESwitch } = formItemModels;
+const { EInputTrim, EInputNumber, ERadioGroup, ECheckboxGroup, ESelect, ESwitch } = formItemModels;
 
 export default {
   components: {
@@ -40,66 +40,65 @@ export default {
       forms: [
         {
           type: 'EInput',
-          title: 'Input输入框',
+          title: 'EInput 输入框',
           specs: [
             {
               type: 'EInputTrim',
-              title: 'Input Trim输入框',
+              title: 'EInputTrim 输入框',
               props: new EInputTrim()
             },
             {
-              type: 'EInputNum',
-              title: 'Input Number输入框',
-              props: new EInputNum()
+              type: 'EInputNumber',
+              title: 'EInputNumber 输入框',
+              props: new EInputNumber()
             }
           ]
         },
         {
-          type: 'ERadio',
-          title: 'Radio 单选框',
+          type: 'ERadioGroup',
+          title: 'ERadioGroup 单选框组',
           specs: [
             {
-              type: 'ERadio',
-              title: 'ERadio 单选框',
-              props: new ERadio()
+              type: 'ERadioGroup',
+              title: 'ERadioGroup 单选框组',
+              props: new ERadioGroup()
             }
           ]
         },
         {
           type: 'ECheckboxGroup',
-          title: 'Checkbox 多选框',
+          title: 'ECheckboxGroup 复选框组',
           specs: [
             {
               type: 'ECheckboxGroup',
-              title: 'Checkbox 单选框组',
+              title: 'ECheckboxGroup 复选框组',
               props: new ECheckboxGroup()
             }
           ]
         },
         {
           type: 'ESelect',
-          title: 'Select 选择器',
+          title: 'ESelect 下拉框',
           specs: [
             {
               type: 'ESelect',
-              title: 'Select 单选框组',
+              title: 'ESelect 下拉框',
               props: new ESelect()
             }
           ]
         },
         {
           type: 'ESwitch',
-          title: 'Switch开关',
+          title: 'ESwitch 开关',
           specs: [
             {
               type: 'ESwitch',
-              title: 'Switch 单选框组',
+              title: 'ESwitch 开关',
               props: new ESwitch()
             }
           ]
         }
-      ],
-      activeName: ['EInput']
+      ]
     };
   },
   methods: {

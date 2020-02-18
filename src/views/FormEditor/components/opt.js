@@ -4,27 +4,27 @@
 export const input_type_opts = [
   {
     value: 'EInputTrim',
-    label: '输入框 Trim Input'
+    label: 'EInputTrim 输入框'
   },
   {
-    value: 'EInputNum',
-    label: '输入框 Num Input'
+    value: 'EInputNumber',
+    label: 'EInputNumber 输入框'
+  },
+  {
+    value: 'ERadioGroup',
+    label: 'ERadioGroup 单选框组'
   },
   {
     value: 'ECheckboxGroup',
-    label: '复选框 Checkbox组'
-  },
-  {
-    value: 'ERadio',
-    label: '单选框 Radio'
+    label: 'ECheckboxGroup 复选框组'
   },
   {
     value: 'ESelect',
-    label: '选择器 Select'
+    label: 'ESelect 下拉框'
   },
   {
     value: 'ESwitch',
-    label: '开关 Switch'
+    label: 'ESwitch 开关'
   }
 ]
 
@@ -45,13 +45,13 @@ export const value_type_opts = [
 export const v_for_type_opts = [
   {
     label: 'labelArray',
-    auth: ['ERadio', 'ECheckboxGroup', 'ESelect']
+    auth: ['ERadioGroup', 'ECheckboxGroup', 'ESelect']
   }, {
     label: '空数组',
     auth: ['ESelect']
   }, {
     label: '字符串数组',
-    auth: ['ERadio', 'ECheckboxGroup', 'ESelect']
+    auth: ['ERadioGroup', 'ECheckboxGroup', 'ESelect']
   }
 ];
 export const isSimpleArray = vForType => ['空数组', '字符串数组'].includes(vForType);
