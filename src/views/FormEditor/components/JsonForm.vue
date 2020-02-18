@@ -45,7 +45,7 @@ export default {
               tmp = tmp.concat(res);
             });
           } else {
-            const pre = pre_value ? `${pre_value}${item}.` : `${item}.`;
+            const pre = pre_value ? `${pre_value}${item}_` : `${item}_`;
             const res = this.flattening(data[item], pre);
             tmp = tmp.concat(res);
           }
