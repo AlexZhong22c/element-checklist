@@ -19,12 +19,13 @@
  */
 import { isObject, isArray } from '@/utils';
 import formItemModels from '@/models/form-item.js';
+import testData from '../test.json';
 
 const { EInputTrim } = formItemModels;
 export default {
   data () {
     return {
-      formJson: undefined
+      formJson: JSON.stringify(testData, undefined, 2)
     };
   },
   methods: {

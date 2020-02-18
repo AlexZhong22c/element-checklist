@@ -1,0 +1,10 @@
+{
+  "id": "商品ID",
+  "name": "商品名称",
+  "price": "价格",
+  "introduction": "说明",
+  "store": {
+    "id": "店铺ID",
+    "name": "所属店铺"
+  }
+}
