@@ -339,22 +339,21 @@ export default {
   },
   watch: {
     formItemToHandle (val) {
-      if (val.added) {
-        this.opt = 'add';
-        this.idx = val.added.newIndex;
-        this.formItemElement = val.added.element;
-        this.formItemAttribute = { ...val.added.element.props };
-      }
-      // else {
+      // if (val.added) {
+      //   this.opt = 'add';
+      //   this.idx = val.added.newIndex;
+      //   this.formItemElement = val.added.element;
+      //   this.formItemAttribute = { ...val.added.element.props };
+      // } else {
       //   this.opt = 'others';
       //   this.idx = 0;
-      // this.formItemAttribute = {};
+      //   this.formItemAttribute = {};
       // }
       if (val.type === 'click') {
         this.opt = 'click';
         this.idx = val.idx;
-        this.formItemElement = val.element;
-        this.formItemAttribute = { ...val.element.props };
+        this.formItemElement = deepCloneJSON(val.element);
+        this.formItemAttribute = deepCloneJSON(val.element.props);
       }
     }
   },
@@ -386,7 +385,8 @@ export default {
       this.setFormItemAttribute();
     },
     setFormItemAttribute () {
-      if (this.opt === 'add' || this.opt === 'click') {
+      // if (this.opt === 'add' || this.opt === 'click') {
+      if (this.opt === 'click') {
         this.$store.commit('UPDATE_FORMITEM_OF_ITEMS', {
           idx: this.idx,
           formItem: {

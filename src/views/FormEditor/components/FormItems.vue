@@ -98,16 +98,16 @@ export default {
   methods: {
     genFormItem (val) {
       this.$store.commit('SET_FORMITEMS', this.formItemsToDrop);
-      if (val.added) {
-        this.$store.commit('SET_CLICKED_INDEX', val.added.newIndex);
-        /**
-         * 由 vuedraggable 产生确定格式：
-         * { added: { element: {
-         *  { props: {}, title, type }
-         * }, newIndex: 0 } }
-         */
-        this.$store.commit('SET_FORMITEM_HANDLE', val);
-      }
+      /**
+       * 由 vuedraggable 产生确定格式：
+       * { added: { element: {
+       *  { props: {}, title, type }
+       * }, newIndex: 0 } }
+       */
+      // if (val.added) {
+      //   this.$store.commit('SET_CLICKED_INDEX', val.added.newIndex);
+      //   this.$store.commit('SET_FORMITEM_HANDLE', val);
+      // }
     },
     genFormItemByClick (idx, element) {
       this.$store.commit('SET_CLICKED_INDEX', idx);
@@ -143,7 +143,7 @@ export default {
 }
 
 .bigDragArea::after {
-  content: "请点击表单元素";
+  content: "请点击表单元素或使用JSON生成";
   height: 200px;
   font-size: 30px;
   color: #858585;
