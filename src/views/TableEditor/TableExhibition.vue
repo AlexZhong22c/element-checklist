@@ -57,6 +57,11 @@ export default {
       },
       immediate: true
     },
+    getTableAPI (val) {
+      this.code = genTableSnippet(this.headers, val);
+      this.$store.commit('SET_SRC_TABLE_CODE', this.code);
+      window.localStorage.setItem('vue-element-table-gen-code', this.code);
+    },
     headers: {
       handler (val) {
         this.code = genTableSnippet(val, this.getTableAPI);

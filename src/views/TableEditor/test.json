@@ -1,51 +1,32 @@
 {
-  "code": 20000,
-  "message": "OK",
+  "code": 200,
   "data": {
     "items": [
       {
-        "id": 2000101,
-        "name": "礼品卡",
-        "type": "gift_card",
-        "price": 1990,
-        "inventory": 57,
+        "id": 345678,
+        "name": "电子烟",
+        "price": 2990,
         "sales": 0,
-        "status": "ON_SALE",
-        "allow_associate": false,
-        "unlimited_stock": true,
-        "introduction": "商品说明",
-        "created_at": 1557826153,
-        "shipping_type": "address"
+        "infinite_stock": true,
+        "introduction": "商品说明"
       },
       {
-        "id": 2000101,
-        "name": "礼品卡",
-        "type": "gift_card",
+        "id": 234567,
+        "name": "吸尘器",
         "price": 1990,
-        "inventory": 57,
-        "sales": 0,
-        "status": "ON_SALE",
-        "allow_associate": false,
-        "unlimited_stock": true,
-        "introduction": "商品说明",
-        "created_at": 1557826153,
-        "shipping_type": "address"
+        "sales": 4,
+        "infinite_stock": true,
+        "introduction": "吸尘器商品说明"
       },
       {
-        "id": 2000101,
-        "name": "礼品卡",
-        "type": "gift_card",
-        "price": 1990,
-        "inventory": 57,
-        "sales": 0,
-        "status": "ON_SALE",
-        "allow_associate": false,
-        "unlimited_stock": true,
-        "introduction": "商品说明",
-        "created_at": 1557826153,
-        "shipping_type": "address"
+        "id": 345678,
+        "name": "吹风机",
+        "price": 990,
+        "sales": 8,
+        "infinite_stock": false,
+        "introduction": "吹风机商品说明"
       }
     ],
-    "count": 77
+    "count": 3
   }
 }

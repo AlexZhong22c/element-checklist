@@ -1,9 +1,8 @@
 <template>
   <div>
     <div slot="header" class="clearfix" style="margin-bottom:15px;">
-      <!-- // @TODO: -->
-      <!-- <el-input size="mini" v-model.trim='getTableAPI' placeholder='获取数据的函数' style='width:200px'></el-input> -->
-      <el-button size="mini" type="primary" style="float:right" @click="prettierJSON(this.codeString)">生成表格</el-button>
+      <el-input size="mini" v-model.trim='getTableDataAPI' placeholder='请求接口函数名' style='width:200px'></el-input>
+      <el-button size="mini" type="primary" style="float:right" @click="prettierJSON(codeString)">生成表格</el-button>
     </div>
     <el-input
       type="textarea"
@@ -31,15 +30,14 @@ export default {
     };
   },
   computed: {
-    // 目前没用到：
-    // getTableDataAPI: {
-    //   get () {
-    //     return this.getTableAPI
-    //   },
-    //   set (val) {
-    //     this.$emit('update:getTableAPI', val)
-    //   }
-    // }
+    getTableDataAPI: {
+      get () {
+        return this.getTableAPI
+      },
+      set (val) {
+        this.$emit('update:getTableAPI', val)
+      }
+    }
   },
   created () {
     this.$emit('change', testData);
