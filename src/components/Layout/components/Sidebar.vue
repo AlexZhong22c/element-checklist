@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     skipCurrent (path) {
-      this.$router.push({ path });
+      this.$router.push({ path }).catch(err => err);
     }
   }
 };

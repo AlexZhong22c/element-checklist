@@ -131,7 +131,7 @@ export default {
         });
     },
     skipToEditor () {
-      this.$router.push('/code-editor');
+      this.$router.push('/code-editor').catch(err => err);
     }
   }
 };

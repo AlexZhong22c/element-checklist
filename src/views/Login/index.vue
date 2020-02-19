@@ -22,7 +22,7 @@
           type="text"
           size="mini"
           style="text-align:right;"
-          @click="$router.push('/signup')"
+          @click="$router.push('/signup').catch(err => err)"
         >
           没有账号？去注册
           <i class="el-icon-right" />
@@ -52,7 +52,7 @@ export default {
       //   .then(resp => {
       //     this.loading = false;
       //     this.$store.dispatch('Login', resp.data.token).then(() => {
-      //       this.$router.push(this.$route.query.redirect || '/');
+      //       this.$router.push(this.$route.query.redirect || '/').catch(err => err);
       //     });
       //   })
       //   .catch(() => {
