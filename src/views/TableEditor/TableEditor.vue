@@ -1,7 +1,8 @@
 <template>
   <div>
     <div slot="header" class="clearfix" style="margin-bottom:15px;">
-      <el-input size="mini" v-model.trim='getTableAPI' placeholder='获取数据的函数' style='width:200px'></el-input>
+      <!-- // @TODO: -->
+      <!-- <el-input size="mini" v-model.trim='getTableAPI' placeholder='获取数据的函数' style='width:200px'></el-input> -->
       <el-button size="mini" type="primary" style="float:right" @click="prettierJSON(this.codeString)">生成表格</el-button>
     </div>
     <el-input
@@ -16,7 +17,7 @@
 
 <script>
 import testData from './test.json';
-import { syntaxHighlight } from '@/utils';
+// import { syntaxHighlight } from '@/utils';
 export default {
   props: {
     getTableAPI: {
@@ -30,21 +31,22 @@ export default {
     };
   },
   computed: {
-    getTableDataAPI: {
-      get () {
-        return this.getTableAPI
-      },
-      set (val) {
-        this.$emit('update:getTableAPI', val)
-      }
-    }
+    // 目前没用到：
+    // getTableDataAPI: {
+    //   get () {
+    //     return this.getTableAPI
+    //   },
+    //   set (val) {
+    //     this.$emit('update:getTableAPI', val)
+    //   }
+    // }
   },
   created () {
     this.$emit('change', testData);
   },
   methods: {
-    syntaxHighlight,
-    gen () {},
+    // syntaxHighlight,
+    // gen () {},
     prettierJSON (val) {
       this.codeObject = JSON.parse(val);
       this.codeString = JSON.stringify(this.codeObject, undefined, 2);
