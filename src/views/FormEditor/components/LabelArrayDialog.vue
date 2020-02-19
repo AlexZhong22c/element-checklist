@@ -92,7 +92,7 @@ export default {
   },
   created () {
     listenShowLabelArrayDialog(list => {
-      this.labelArrayTableData = deepCloneJSON(list);
+      this.labelArrayTableData = list ? deepCloneJSON(list) : [];
       this.labelArrayDialogVisible = true;
     });
   },

@@ -3,9 +3,9 @@
     <el-form :model="formItemAttribute" label-width="90px">
       <el-form-item label="表单元素">
         <el-select
-          v-model="formItemElement.type"
+          :value="formItemElement.type"
           placeholder="请选择表单元素类型"
-          @change="setFormItemAttribute"
+          @change="onChangeFormItemElement"
         >
           <el-option
             v-for="item in input_type_opts"
@@ -333,26 +333,30 @@ export default {
   },
   mounted () {
     listenSubmitLabelArrayDialog(list => {
-      this.formItemAttribute.labelArrayData = deepCloneJSON(list);
+      this.$set(this.formItemAttribute, 'labelArrayData', deepCloneJSON(list));
       this.setFormItemAttribute();
     });
   },
   watch: {
     formItemToHandle (val) {
-      // if (val.added) {
-      //   this.opt = 'add';
-      //   this.idx = val.added.newIndex;
-      //   this.formItemElement = val.added.element;
-      //   this.formItemAttribute = { ...val.added.element.props };
-      // } else {
+      if (val.added) {
+        this.opt = 'add';
+        this.idx = val.added.newIndex;
+        this.formItemElement = val.added.element;
+        this.formItemAttribute = { ...val.added.element.props };
+      }
+      // else {
       //   this.opt = 'others';
       //   this.idx = 0;
-      //   this.formItemAttribute = {};
+      // this.formItemAttribute = {};
       // }
       if (val.type === 'click') {
         this.opt = 'click';
         this.idx = val.idx;
-        this.formItemElement = deepCloneJSON(val.element);
+        this.formItemElement = {
+          type: val.element.type,
+          title: val.element.title
+        };
         this.formItemAttribute = deepCloneJSON(val.element.props);
       }
     }
@@ -385,8 +389,7 @@ export default {
       this.setFormItemAttribute();
     },
     setFormItemAttribute () {
-      // if (this.opt === 'add' || this.opt === 'click') {
-      if (this.opt === 'click') {
+      if (this.opt === 'add' || this.opt === 'click') {
         this.$store.commit('UPDATE_FORMITEM_OF_ITEMS', {
           idx: this.idx,
           formItem: {
@@ -406,6 +409,13 @@ export default {
       formItemAttribute.switchValueType = attr.switchValueType;
       formItemAttribute.inactiveValue = attr.inactiveValue;
       formItemAttribute.activeValue = attr.activeValue;
+      this.setFormItemAttribute();
+    },
+    onChangeFormItemElement (value) {
+      this.formItemElement.type = value;
+      // 匹配出对应的title:
+      this.formItemElement.title = (input_type_opts.find(item => item.value === value) || {}).label;
+      this.formItemAttribute = {};
       this.setFormItemAttribute();
     }
   },
