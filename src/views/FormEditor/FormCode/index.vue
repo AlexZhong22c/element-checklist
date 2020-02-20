@@ -57,19 +57,6 @@ export default {
     },
     skipToEdit () {
       window.open(`./code-editor`, '_blank');
-    },
-    openDrawer (target) {
-      let shouldOpen = true;
-      while (!target.matches('.controls')) {
-        if (target.matches('.control-0') || target.matches('.control-2')) {
-          shouldOpen = false;
-          break;
-        } else {
-          // eslint-disable-next-line no-param-reassign
-          target = target.parentNode;
-        }
-      }
-      return shouldOpen;
     }
   }
 };
