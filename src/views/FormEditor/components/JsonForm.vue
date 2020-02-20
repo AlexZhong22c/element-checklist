@@ -68,8 +68,11 @@ export default {
 
     gen () {
       try {
+        // 这句eval对于 对象的字符串 和 json的字符串 都有用。
+        // 一定要加String()它才不报错，可能是因为能阉割掉vue绑定的属性。
+        const fixedStr = String(this.formJson);
         // eslint-disable-next-line no-eval
-        const formData = eval(`(${this.formJson})`);
+        const formData = eval(`(${fixedStr})`);
         const formItems = this.flattening(formData);
         this.$store.commit('SET_FORMITEMS', formItems);
       } catch (error) {

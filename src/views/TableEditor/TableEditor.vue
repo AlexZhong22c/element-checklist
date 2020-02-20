@@ -46,8 +46,11 @@ export default {
     // syntaxHighlight,
     // gen () {},
     prettierJSON (val) {
-      this.codeObject = JSON.parse(val);
-      this.codeString = JSON.stringify(this.codeObject, undefined, 2);
+      // 这句eval对于 对象的字符串 和 json的字符串 都有用。
+      // 一定要加String()它才不报错，可能是因为能阉割掉vue绑定的属性。
+      const fixedStr = String(val);
+      // eslint-disable-next-line no-eval
+      this.codeObject = eval(`(${fixedStr})`);
       this.$emit('change', this.codeObject);
     }
   }

@@ -9,10 +9,10 @@
         placeholder="表单对象"
       />
     </el-form-item>
-    <el-form-item label="更新方法">
+    <el-form-item label="提交方法">
       <el-input
         v-model.trim="form.method"
-        placeholder="更新方法"
+        placeholder="提交方法"
       />
     </el-form-item>
     <el-form-item label="表单Ref">
