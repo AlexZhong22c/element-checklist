@@ -4,8 +4,7 @@
       href="https://github.com/AlexZhong22c/element-checklist"
       target="_blank"
     >
-      <h1
-        style="float:left;margin-left:10px;line-height:60px;margin-top:0;margin-bottom:0;padding:0;"
+      <h1 class="siderbar__project-name"
       >element checklist</h1>
     </a>
     <el-menu
@@ -57,6 +56,15 @@ export default {
   height: 100%;
   background: #fff;
   border-bottom: 1px solid #dcdfe6;
+}
+.siderbar__project-name {
+  color: #193ca0;
+  float:left;
+  margin-left:10px;
+  line-height:60px;
+  margin-top:0;
+  margin-bottom:0;
+  padding:0;
 }
 
 </style>
