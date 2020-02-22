@@ -7,7 +7,7 @@
     <el-input
       type="textarea"
       :autosize="{ minRows: 5}"
-      placeholder="请输入内容, eg:{value:label}，记得给label加上引号"
+      placeholder="请输入内容, eg:{value:label}，JSON或JS对象格式"
       v-model="codeString"
       @change="prettierJSON"
     ></el-input>

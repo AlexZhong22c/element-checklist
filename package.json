@@ -1,6 +1,6 @@
 {
   "name": "element-checklist",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "author": "az22c",
   "description": "checklist workflow: a code generator for starting up an element-ui component",
   "bin": {
