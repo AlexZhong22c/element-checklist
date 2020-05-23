@@ -5,7 +5,7 @@
     <img alt="License: AGPL v3" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" target="_blank" />
   </a>
   <a href='https://travis-ci.org/AlexZhong22c/element-checklist' target="_blank" alt='travis ci'>
-  <img alt='travis ci' src='https://travis-ci.org/AlexZhong22c/element-checklist.svg?branch=preview'>
+  <img alt='travis ci' src='https://travis-ci.com/AlexZhong22c/element-checklist.svg?branch=preview'>
   </a>
 </p>
 
