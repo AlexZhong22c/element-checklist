@@ -14,7 +14,7 @@ touch .nojekyll
 git init
 git add -A
 git commit -m 'deploy'
-git push -f "https://${GITHUB_TOKEN}@github.com/AlexZhong22c/element-checklist.git" master:gh-pages
-
+# git push -f "https://${GITHUB_TOKEN}@github.com/AlexZhong22c/element-checklist.git" master:gh-pages
+git push -f https://github.com/AlexZhong22c/element-checklist.git master:gh-pages
 
 cd -
