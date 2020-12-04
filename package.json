@@ -44,7 +44,7 @@
     "concurrently": "^4.1.2",
     "core-js": "^2.6.5",
     "element-ui": "^2.10.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "http-server": "^0.11.1",
     "koa": "^2.8.1",
     "koa-bodyparser": "^4.2.1",
