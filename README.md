@@ -12,7 +12,10 @@
 > 
 > 特点：用于新建组件；标准化；控制代码质量
 
-## 🏠 [Homepage / 演示](https://AlexZhong22c.github.io/element-checklist/)   :point_left:
+## 🏠 Homepage
+
+- [演示 @gitee](https://az22c.gitee.io/element-checklist)   :point_left:
+  - [演示 @github（内容同）](https://AlexZhong22c.github.io/element-checklist/)   :point_left:
 
 ## Install and Bootup
 
