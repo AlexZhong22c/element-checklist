@@ -58,6 +58,9 @@
   - [x] 支持多开浏览器tab间同步代码结果
         </pre>
       </div>
+      <div>
+        <h3>开始使用：本页右上角有导航</h3>
+      </div>
     </el-card>
   </div>
 </template>

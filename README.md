@@ -98,3 +98,7 @@ npx e-checklist serve
 ## Support
 
 Give a ⭐️ if the project inspired you!
+
+## 备注：
+
+太久没更新了。node ≥ 14
