@@ -4,9 +4,6 @@
    <a href="https://github.com/AlexZhong22c/element-checklist/blob/master/LICENSE">
     <img alt="License: AGPL v3" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" target="_blank" />
   </a>
-  <a href='https://travis-ci.org/AlexZhong22c/element-checklist' target="_blank" alt='travis ci'>
-  <img alt='travis ci' src='https://travis-ci.com/AlexZhong22c/element-checklist.svg?branch=preview'>
-  </a>
 </p>
 
 > checklist工作流，快速创建 element-ui 组件并生成对应代码。
@@ -15,7 +12,7 @@
 > 
 > 特点：用于新建组件；标准化；控制代码质量
 
-## 🏠 [Homepage](https://AlexZhong22c.github.io/element-checklist/)
+## 🏠 [Homepage / 演示](https://AlexZhong22c.github.io/element-checklist/)   :point_left:
 
 ## Install and Bootup
 
