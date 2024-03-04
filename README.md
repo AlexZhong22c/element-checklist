@@ -17,6 +17,11 @@
 - [演示 @gitee](https://az22c.gitee.io/element-checklist)   :point_left:
   - [演示 @github（内容同）](https://AlexZhong22c.github.io/element-checklist/)   :point_left:
 
+---
+
+- [代码仓库 @gitee](https://gitee.com/az22c/element-checklist)   :point_left:
+  - [代码仓库 @github（内容同）](https://github.com/AlexZhong22c/element-checklist)   :point_left:
+
 ## Install and Bootup
 
 ```sh
