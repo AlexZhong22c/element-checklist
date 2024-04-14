@@ -37,9 +37,9 @@
         <pre>
 - 在线预览代码
 - 如果npm install了，在本地启动该npm包内的后端可以把代码文件输出到本地(待优化)
-
-![由后端支持输出代码文件](./README_images/element-checklist_choose-pwd.png)
-
+        </pre>
+        <img src="https://gitee.com/az22c/element-checklist/raw/master/README_images/element-checklist_choose-pwd.png" alt="由后端支持输出代码文件" />
+        <pre>
 - [x] 将后端JSON接口返回字段，稍作修改，粘贴生成出组件的代码框架
 - [x] 用UI交互来取代代码的编写：明显比直接编辑器编写代码快
 - [ ] 支持为组件标注注释：这样方便先写TODO来记住后续需要如何修改
