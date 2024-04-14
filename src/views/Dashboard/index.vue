@@ -36,9 +36,12 @@
         <h3>功能汇总</h3>
         <pre>
 - 在线预览代码
-- 如果npm install了，在本地启动该npm包内的后端可以把代码文件输出到本地(待优化)
+  - 代码输出本地：如果npm install了，在本地启动该npm包内的后端可以把代码文件输出到本地(待优化)
         </pre>
-        <img src="https://gitee.com/az22c/element-checklist/raw/master/README_images/element-checklist_choose-pwd.png" alt="由后端支持输出代码文件" />
+        <span>
+          <span style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</span>
+          <img v-if="choosePathSrc" :src="choosePathSrc" style="width: 580px;" alt="由后端支持输出代码文件" />
+        </span>
         <pre>
 - [x] 将后端JSON接口返回字段，稍作修改，粘贴生成出组件的代码框架
 - [x] 用UI交互来取代代码的编写：明显比直接编辑器编写代码快
@@ -56,6 +59,12 @@
   - [x] 支持判断表格字段是否为查询字段(待完善)
 - [x] 在线代码编辑器
   - [x] 支持多开浏览器tab间同步代码结果
+
+（“源码片段” 重写，提高可读性，降低系统复杂度：）
+
+- [x] 用js模板字符串和它的 $ 插值
+- [x] “源码片段”的函数括号框位置上顶替 目标代码的花括号、数组的方括号
+- [x] 把不直观的、处理边际情况的操作，封装挪到一行“源码片段”的后面，比如控制片段是否产生和控制缩进等
         </pre>
       </div>
       <div>
@@ -70,10 +79,17 @@ import { mapGetters } from 'vuex';
 
 export default {
   data () {
-    return {};
+    return {
+      choosePathSrc: '',
+      isInGithub: null
+    };
   },
   computed: {
-    ...mapGetters(['pwd', 'pwd_segments', 'custom_pwds', 'isOffline'])
+    ...mapGetters(['pwd', 'pwd_segments', 'custom_pwds', 'isOffline']),
+  },
+  mounted () {
+    this.isInGithub = location.href.includes('github')
+    this.choosePathSrc = this.isInGithub ? 'https://raw.githubusercontent.com/AlexZhong22c/element-checklist/master/README_images/element-checklist_choose-pwd.png' : 'https://gitee.com/az22c/element-checklist/raw/master/README_images/element-checklist_choose-pwd.png'
   },
   created () {
     const custom_pwds_str = localStorage.getItem('element-checklist-custom_pwd_list');
