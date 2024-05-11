@@ -1,11 +1,14 @@
 <template>
   <div class="sidebar-wrapper">
+    <router-link to="/">
+      <h1 class="siderbar__project-name"
+      >element checklist</h1>
+    </router-link>&nbsp;
     <a
       href="https://github.com/AlexZhong22c/element-checklist"
       target="_blank"
-    >
-      <h1 class="siderbar__project-name"
-      >element checklist</h1>
+      style="font-size: 12px;"
+    >github
     </a>
     <el-menu
       style="float:right"
@@ -54,6 +57,7 @@ export default {
 <style scoped>
 .sidebar-wrapper {
   height: 100%;
+  line-height: 60px;
   background: #fff;
   border-bottom: 1px solid #dcdfe6;
 }
