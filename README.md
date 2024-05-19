@@ -14,7 +14,7 @@
 
 ## 🏠 Homepage
 
-- [演示 @gitee](https://az22c.gitee.io/element-checklist)   :point_left:
+- [演示 @vercel](https://www.az22c.top/element-checklist/#/)   :point_left:
   - [演示 @github（内容同）](https://AlexZhong22c.github.io/element-checklist/)   :point_left:
 
 ---
@@ -95,6 +95,12 @@ npx e-checklist serve
   - [x] 支持判断表格字段是否为查询字段(待完善)
 - [x] 在线代码编辑器
   - [x] 支持多开浏览器tab间同步代码结果
+
+（“源码片段” 重写，提高可读性，降低系统复杂度：）
+
+- [x] 用js模板字符串和它的`$`插值
+- [x] “源码片段”的函数括号框位置上顶替 目标代码的花括号、数组的方括号
+- [x] 把不直观的、处理边际情况的操作，**封装挪到一行“源码片段”的后面**，比如控制片段是否产生和控制缩进等
 
 ## Author
 
