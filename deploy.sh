@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# 运行 ./deploy.sh 前仅需要切换nvm node v14：
 
 # 确保脚本抛出遇到的错误
 set -e
