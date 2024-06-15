@@ -91,7 +91,7 @@ export default {
   },
   mounted () {
     this.isInGithub = location.href.includes('github')
-    this.choosePathSrc = this.isInGithub ? 'https://raw.githubusercontent.com/AlexZhong22c/element-checklist/master/README_images/element-checklist_choose-pwd.png' : 'https://www.az22c.top/element-checklist/choose-pwd.png'
+    this.choosePathSrc = this.isInGithub ? 'https://raw.githubusercontent.com/AlexZhong22c/element-checklist/master/README_images/element-checklist_choose-pwd.png' : 'https://x.az22c.top/element-checklist/choose-pwd.png'
   },
   created () {
     const custom_pwds_str = localStorage.getItem('element-checklist-custom_pwd_list');
